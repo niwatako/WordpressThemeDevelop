@@ -6,12 +6,14 @@ CentOS6.5 64bit for Virtualbox. GuestAdditions installed.
 Wordpressが稼働するサーバー環境が用意されています。
 
 	yum install httpd mysql-server php php-mysql php-mbstring php-xml
+VagrantBoxはこちらのものです([niwatako/CentOS65WordpressBox](https://vagrantcloud.com/niwatako/CentOS65WordpressBox) )
 ##使い方
 ###WordPress
 wordpressディレクトリに使用したいバージョンのWordPressを展開し、設定済みのwp-config.phpをコピーします。
 
 	# WordPress 3.9.1 を wordpress ディレクトリに取得
 	# github.com/WordPress/WordPressはWordPresssのSVNのミラーです。
+	rm -rf wordpress
 	git clone --branch 3.9.1 https://github.com/WordPress/WordPress.git wordpress
 	
 	# wp-config.phpをコピー
